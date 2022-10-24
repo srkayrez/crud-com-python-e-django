@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <style>
+        .voltar{
+            border-radius: 20px;
+            background-color:red;
+            color: white;
+            border: none;
+            text-align: center;
+        }
+        .tabela{
+            text-align: center;
+        }
+        td,tr{
+            padding: 0.5em;
+        }
+        .titulos{
+            background-color: rgb(48, 48, 48);
+            color: white;
+        }
+        .botaow{
+            background-color: rgb(0, 184, 0);
+            color:white;
+            border-radius: 20px;
+            border: none;
+            padding: 1em;
+        }
+        button.botaow:hover
+        {
+            background-color: rgb(0, 70, 0);
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud com python</title>
+</head>
+<body>
+    <div class="estilo">
+        <div class="conteudo">
+            <h1>Cadastrar novo contato</h1>
+            <a href="/">
+            <button class="voltar">voltar</button>
+            <div id="result"></div>
+            </a>
+            <form name="form" id="form" action="{% if db %}/update/{{db.id}}/{% else %} /create/ {% endif %}" method="post">
+                {% csrf_token %}
+                <div>
+                    <label>Tipo</label>
+                    <br>
+                    {{form.tipo}}
+                </div>
+                <div>
+                    <label>Nome</label>
+                    <br>
+                    {{form.nome}}
+                </div>
+                <div>
+                    <label>Numero</label>
+                    <br>
+                    {{form.numero}}
+                </div>
+                <input type="submit" value="Salvar">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.novoContato{
+    border-radius: 20px;
+    background-color:red;
+    color: white;
+    border: none;
+    text-align: center;
+}
+.tabela{
+    text-align: center;
+}
+td,tr{
+    padding: 0.5em;
+}
+.titulos{
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+.botaow{
+    background-color: rgb(0, 184, 0);
+    color:white;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+}
+button.botaow:hover
+{
+    background-color: rgb(0, 70, 0);
+}
